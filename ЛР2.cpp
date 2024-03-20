@@ -9,8 +9,8 @@ public:
     int lowerBound;
     int upperBound;
 
-    Array(int lower, int upper) : lowerBound(lower), upperBound(upper) {
-        data.resize(upper - lower + 1);
+    Array(int low, int upper) : lowerBound(low), upperBound(upper) {
+        data.resize(upper - low + 1);
     }
 
     ~Array() {}
@@ -94,22 +94,22 @@ public:
 };
 
 int main() {
-    int lower, upper;
-    //std::cout << "Enter lower and upper bounds of the array: ";
-    std::cin >> lower >> upper;
+    int low, upper;
+    //std::cout << "Enter low and upper bounds of the array: ";
+    std::cin >> low >> upper;
 
-    Array array1(lower, upper);
-    Array array2(lower, upper);
+    Array array1(low, upper);
+    Array array2(low, upper);
 
     //std::cout << "Enter array elements for Array1: ";
-    for (int i = lower; i <= upper; ++i) {
+    for (int i = low; i <= upper; ++i) {
         int value;
         std::cin >> value;
         array1.setValue(i, value);
     }
 
     //std::cout << "Enter array elements for Array2: ";
-    for (int i = lower; i <= upper; ++i) {
+    for (int i = low; i <= upper; ++i) {
         int value;
         std::cin >> value;
         array2.setValue(i, value);
@@ -141,7 +141,7 @@ int main() {
     //std::cout << "delenie= ";
    // (array1 / array2).print();
     int chet = 0;
-    for (int i = lower; i <= upper; ++i) {
+    for (int i = low; i <= upper; ++i) {
         if (array2.getValue(i) == 0) {
             chet += 1;
         }
@@ -168,7 +168,7 @@ int main() {
         std::cin >> index;
 
         if (action == 1) {
-            if (index >= lower && index <= upper)
+            if (index >= low && index <= upper)
                 std::cout << "Array1[" << index << "]= " << array1.getValue(index) << std::endl;
             else {
                 array1.getValue(index);
@@ -176,7 +176,7 @@ int main() {
             }
         }
         else if (action == 2) {
-            if (index >= lower && index <= upper)
+            if (index >= low && index <= upper)
                 std::cout << "Array2[" << index << "]= " << array2.getValue(index) << std::endl;
             else {
                 array1.getValue(index);
