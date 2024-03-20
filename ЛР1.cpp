@@ -12,14 +12,14 @@ public:
     // create mass
     void new_mass()
     {
-        double temp;
+        double tem;
 
         std::cin >> n;
 
         for (int i = 0; i < n; i++)
         {
-            std::cin >> temp;
-            mass.push_back(temp);
+            std::cin >> tem;
+            mass.push_back(tem);
         }
 
         std::cout << mass.size() << std::endl;
@@ -58,10 +58,10 @@ private:
     // new element
     void add_el()
     {
-        double temp;
-        std::cin >> temp;
+        double tem;
+        std::cin >> tem;
 
-        mass.push_back(temp);
+        mass.push_back(tem);
 
         std::cout << "+: " << mass.size() << std::endl;
     }
